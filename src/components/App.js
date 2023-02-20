@@ -6,7 +6,7 @@ export function App({ initialData }) {
     return (
         <div>
         <h1>{initialData.appName}</h1>
-        <p>Add items to your shopping list by writing them to input field and clicking ADD - button after.</p>
+        <p>Add items to your shopping list by writing them to input field and clicking ADD - button. You may also hit enter to add the item to the list.</p>
         <br />
         <br />
         <ItemList />

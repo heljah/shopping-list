@@ -1,4 +1,6 @@
 import * as React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro' // <-- import styles to be used
 
 export default function ItemList() {
     const [items, setItems] = React.useState([]);
@@ -12,6 +14,7 @@ export default function ItemList() {
                 onClick={() => props.onClick(props.item)}
             >
                 ADD
+                <FontAwesomeIcon icon={solid('plus')} style={{marginLeft: "2em"}} />
             </button>
         );
     }
@@ -35,7 +38,11 @@ export default function ItemList() {
         return (
             <span style={{display: "flex", flexDirection: "row"}}>
                 {props.index + 1}. {props.item}
-                <button onClick={() => deleteItem(props.item)} style={{marginLeft: "auto"}}>DELETE</button>
+
+                <button onClick={() => deleteItem(props.item)} style={{marginLeft: "auto"}}>
+                    DELETE
+                    <FontAwesomeIcon icon={solid('trash')} style={{marginLeft: "2em"}} />
+                </button>
             </span>
         )
     }
@@ -55,6 +62,7 @@ export default function ItemList() {
                     <ListItemRow key={index} index={index} item={item}/>
                 ))}
             </div>
+
         </div>
     );
 }
