@@ -8,6 +8,9 @@ export function App({ initialData }) {
       This is a sample stateful and server-side rendered React application.
       <br />
       <br />
+      <input /> <button>ADD</button>
+      <br />
+      <br />
       Here is a button that will track how many times you click it:
       <br />
       <br />
